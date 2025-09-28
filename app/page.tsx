@@ -274,7 +274,7 @@ const CRMSystem = () => {
   );
 
   // Common components
-  const ProgressIndicator = ({ progress }) => (
+  const ProgressIndicator = ({ progress }: { progress: boolean[] }) => (
     <div className="flex gap-1">
       {progress.map((completed, index) => (
         <div
@@ -287,7 +287,7 @@ const CRMSystem = () => {
     </div>
   );
 
-  const StatusBadge = ({ status }) => {
+  const StatusBadge = ({ status }: { status: string }) => {
     const colors = {
       'Hot': 'bg-red-500/20 text-red-300 border-red-500/30',
       'Warm': 'bg-yellow-500/20 text-yellow-300 border-yellow-500/30',
