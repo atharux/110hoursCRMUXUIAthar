@@ -16,7 +16,7 @@ const CRMSystem = () => {
   const [leadAgeFilter, setLeadAgeFilter] = useState('Last 30 Days');
   const [sortBy, setSortBy] = useState('name');
   const [sortDirection, setSortDirection] = useState('asc');
-  const [selectedLead, setSelectedLead] = useState(null);
+  const [selectedLead, setSelectedLead] = useState<any>(null);
   const [isDialerActive, setIsDialerActive] = useState(false);
 
   // Sample data
