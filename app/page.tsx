@@ -287,20 +287,20 @@ const CRMSystem = () => {
     </div>
   );
 
-  const StatusBadge = ({ status }: { status: string }) => {
-    const colors = {
-      'Hot': 'bg-red-500/20 text-red-300 border-red-500/30',
-      'Warm': 'bg-yellow-500/20 text-yellow-300 border-yellow-500/30',
-      'Expert': 'bg-blue-500/20 text-blue-300 border-blue-500/30',
-      'Cold': 'bg-gray-500/20 text-gray-300 border-gray-500/30'
-    };
-    
-    return (
-      <span className={`px-2 py-1 rounded text-xs border ${colors[status] || colors.Cold}`}>
-        {status}
-      </span>
-    );
+const StatusBadge = ({ status }: { status: string }) => {
+  const colors: { [key: string]: string } = {
+    'Hot': 'bg-red-500/20 text-red-300 border-red-500/30',
+    'Warm': 'bg-yellow-500/20 text-yellow-300 border-yellow-500/30',
+    'Expert': 'bg-blue-500/20 text-blue-300 border-blue-500/30',
+    'Cold': 'bg-gray-500/20 text-gray-300 border-gray-500/30'
   };
+  
+  return (
+    <span className={`px-2 py-1 rounded text-xs border ${colors[status] || colors.Cold}`}>
+      {status}
+    </span>
+  );
+};
 
   // Leads Table component
   const LeadsTable = ({ showHeader = true }) => {
